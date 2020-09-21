@@ -34,6 +34,7 @@ const googleSignIn = () => {
 const logOut = () => {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
+        console.log("log out success");
       }).catch(function(error) {
         // An error happened.
       });
