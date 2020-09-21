@@ -20,6 +20,7 @@ const googleSignIn = () => {
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
               document.getElementById("imgID").src =currentUser.photoURL;
+              window.location = "home.html"
             } else {
               // No user is signed in.
             }
