@@ -14,8 +14,8 @@ const googleSignIn = () => {
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
               console.log("Đăng nhập thành công");
-              var user = firebase.auth().currentUser;
-              console.log(user);
+              var currentUser = firebase.auth().currentUser;
+              console.log(currentUser);
             } else {
               // No user is signed in.
             }
