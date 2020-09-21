@@ -6,7 +6,7 @@ const googleSignIn = () => {
     // firebase.auth().languageCode = 'pt';
     firebase.auth().signInWithPopup(base_provider).then(function(result){
         console.log(result);
-        console.log("Success... Google account Linked");
+        console.log("Success... Google account Linked 1");
         var token = result.credential.accessToken;
         
         var user = result.user;
