@@ -32,6 +32,7 @@ const googleSignIn = () => {
 };
 
 const logOut = () => {
+    console.log("Vào hàm logout");
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
         console.log("log out success");
