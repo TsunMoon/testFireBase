@@ -19,7 +19,7 @@ const googleSignIn = () => {
               console.log(currentUser.displayName);
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
-              document.getElementById("imgID").url =currentUser.photoURL;
+              document.getElementById("imgID").src =currentUser.photoURL;
             } else {
               // No user is signed in.
             }
@@ -38,5 +38,6 @@ const logOut = () => {
         // An error happened.
       });
 }
+
 
 
