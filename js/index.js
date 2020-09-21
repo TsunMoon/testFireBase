@@ -6,7 +6,7 @@ const googleSignIn = () => {
     // firebase.auth().languageCode = 'pt';
     firebase.auth().signInWithPopup(base_provider).then(function(result){
         console.log(result);
-        console.log("Success... Google account Linked 2");
+        console.log("Success... Google account Linked 3");
         var token = result.credential.accessToken;
         
         var user = result.user;
@@ -16,6 +16,10 @@ const googleSignIn = () => {
               console.log("Đăng nhập thành công");
               var currentUser = firebase.auth().currentUser;
               console.log(currentUser);
+              console.log(currentUser.displayName);
+              console.log(currentUser.email);
+              console.log(currentUser.photoURL);
+              document.getElementById("imgID").url =currentUser.photoURL;
             } else {
               // No user is signed in.
             }
@@ -25,4 +29,14 @@ const googleSignIn = () => {
         console.log(err);
         console.log("Failed to do");
     })
+};
+
+const logOut = () => {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
 }
+
+
