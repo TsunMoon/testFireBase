@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="googleSignIn()">Login With Google</button>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAxqfB6SGZKhfS-Dd9y2mjYiIRRe5_BTN0",
+        authDomain: "testfirebase-87c93.firebaseapp.com",
+        databaseURL: "https://testfirebase-87c93.firebaseio.com",
+        projectId: "testfirebase-87c93",
+        storageBucket: "testfirebase-87c93.appspot.com",
+        messagingSenderId: "177068455797",
+        appId: "1:177068455797:web:fc30137b35af41eda0853c",
+        measurementId: "G-B3R59SCRJ1",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="./js/index.js" type="text/javascript"></script>
+  </body>
+</html>
