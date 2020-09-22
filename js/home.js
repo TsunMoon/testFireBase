@@ -9,5 +9,5 @@ const logOut = () => {
       });
 }
 
-console.log(localStorage.getItem("img"););
+console.log(localStorage.getItem("img"));
 document.getElementById("imgID").src = localStorage.getItem("img");
