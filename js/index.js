@@ -20,7 +20,7 @@ const googleSignIn = () => {
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
               document.getElementById("imgID").src =currentUser.photoURL;
-              window.location.href = "home.html"
+              window.location.href = "home.html";
             } else {
               // No user is signed in.
             }
@@ -37,6 +37,7 @@ const logOut = () => {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
         console.log("log out success");
+        window.location.href = "index.html";
       }).catch(function(error) {
         // An error happened.
       });
