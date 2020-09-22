@@ -20,7 +20,8 @@ const googleSignIn = () => {
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
               localStorage.setItem("img",currentUser.img);
-              window.location.href = "home.html";
+              localStorage.setItem("currentUser", JSON.parse(currentUser) );
+              // window.location.href = "home.html";
             } else {
               // No user is signed in.
             }
