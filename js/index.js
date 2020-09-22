@@ -1,5 +1,5 @@
 const googleSignIn = () => {
-    console.log("Vào hàm click 2");
+    console.log("Vào hàm click 3");
 
     base_provider = new firebase.auth.GoogleAuthProvider();
     // base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -19,7 +19,7 @@ const googleSignIn = () => {
               console.log(currentUser.displayName);
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
-              localStorage.setItem("img",currentUser.img);
+              localStorage.setItem("img",currentUser.photoURL);
               localStorage.setItem("currentUser", JSON.stringify(currentUser) );
               // window.location.href = "home.html";
             } else {
