@@ -19,7 +19,7 @@ const googleSignIn = () => {
               console.log(currentUser.displayName);
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
-              document.getElementById("imgID").src =currentUser.photoURL;
+              localStorage.setItem("img",currentUser.img);
               window.location.href = "home.html";
             } else {
               // No user is signed in.
@@ -32,16 +32,6 @@ const googleSignIn = () => {
     })
 };
 
-const logOut = () => {
-    console.log("Vào hàm logout");
-    firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        console.log("log out success 123");
-        window.location.href = "index.html";
-      }).catch(function(error) {
-        // An error happened.
-      });
-}
 
 
 
