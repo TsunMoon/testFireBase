@@ -36,7 +36,7 @@ const logOut = () => {
     console.log("Vào hàm logout");
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        console.log("log out success");
+        console.log("log out success 123");
         window.location.href = "index.html";
       }).catch(function(error) {
         // An error happened.
