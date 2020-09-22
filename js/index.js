@@ -1,5 +1,5 @@
 const googleSignIn = () => {
-    console.log("Vào hàm click 1");
+    console.log("Vào hàm click 2");
 
     base_provider = new firebase.auth.GoogleAuthProvider();
     // base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -14,13 +14,13 @@ const googleSignIn = () => {
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
               console.log("Đăng nhập thành công");
-              var currentUser = firebase.auth().currentUser;
+              var currentUser = firebase.auth().currentUser;2
               console.log(currentUser);
               console.log(currentUser.displayName);
               console.log(currentUser.email);
               console.log(currentUser.photoURL);
               localStorage.setItem("img",currentUser.img);
-              localStorage.setItem("currentUser", JSON.parse(currentUser) );
+              localStorage.setItem("currentUser", JSON.stringify(currentUser) );
               // window.location.href = "home.html";
             } else {
               // No user is signed in.
