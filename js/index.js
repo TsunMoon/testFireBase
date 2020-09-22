@@ -1,5 +1,5 @@
 const googleSignIn = () => {
-    console.log("Vào hàm click");
+    console.log("Vào hàm click 1");
 
     base_provider = new firebase.auth.GoogleAuthProvider();
     // base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
