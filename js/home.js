@@ -9,5 +9,7 @@ const logOut = () => {
       });
 }
 
+var currentUser = firebase.auth().currentUser;
+              console.log(currentUser);
 console.log(localStorage.getItem("img"));
 document.getElementById("imgID").src = localStorage.getItem("img");
